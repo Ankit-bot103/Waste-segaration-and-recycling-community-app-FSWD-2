@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Waste App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Waste Segregation & Recycling App</h1>
+
+  <h2>Register</h2>
+  <input id="name" placeholder="Name">
+  <input id="email" placeholder="Email">
+  <button onclick="register()">Register</button>
+
+  <div id="report-section" style="display:none;">
+    <h2>Submit Waste Report</h2>
+    <input id="reportName" placeholder="Reporter Name">
+    <select id="wasteType">
+      <option value="">Select</option>
+      <option value="Organic">Organic</option>
+      <option value="Plastic">Plastic</option>
+      <option value="Electronic">Electronic</option>
+    </select>
+    <textarea id="description"></textarea>
+    <button onclick="report()">Submit Report</button>
+
+    <h3>All Reports</h3>
+    <button onclick="loadReports()">Load Reports</button>
+    <div id="reports"></div>
+  </div>
+
+  <div id="recycle-section" style="display:none;">
+    <h2>Recycle Items</h2>
+    <select id="recycleType">
+      <option value="">Select</option>
+      <option value="Plastic Bottles">Plastic Bottles</option>
+      <option value="Glass">Glass</option>
+    </select>
+    <input id="recycleQuantity" type="number" min="1">
+    <button onclick="submitRecycle()">Submit for Recycling</button>
+    <div id="recycle-list"></div>
+
+    <h3>Your Points: <span id="points">0</span></h3>
+    <h3>Centers</h3>
+    <button onclick="findCenters()">Show Centers</button>
+    <div id="centers"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
